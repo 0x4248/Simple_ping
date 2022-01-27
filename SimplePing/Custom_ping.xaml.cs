@@ -30,6 +30,7 @@ namespace SimplePing
 			if (!IsConnectedToInternet(Input_domain_or_ip.Text))
 			{
 				ping_time_text.Text = "Cant Connect";
+				Fastorslow.Text = "";
 			}
 			if (IsConnectedToInternet(Input_domain_or_ip.Text))
 			{
