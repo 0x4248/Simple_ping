@@ -133,5 +133,11 @@ namespace SimplePing
 			}
 			return 0;
 		}
+
+		private void Custom_ping(object sender, RoutedEventArgs e)
+		{
+			Custom_ping customping = new Custom_ping();
+			customping.Show();
+		}
 	}
 }
