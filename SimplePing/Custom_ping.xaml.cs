@@ -33,7 +33,21 @@ namespace SimplePing
 			}
 			if (IsConnectedToInternet(Input_domain_or_ip.Text))
 			{
-				ping_time_text.Text = pingtime(Input_domain_or_ip.Text).ToString();
+				long pingspeed = pingtime(Input_domain_or_ip.Text);
+				ping_time_text.Text = pingspeed.ToString()+"ms";
+				if(pingspeed > 50)
+				{
+					Fastorslow.Text = "Slow";
+				}
+				if(pingspeed < 50)
+				{
+					Fastorslow.Text = "OK";
+				}
+				if (pingspeed < 10)
+				{
+					Fastorslow.Text = "Fast";
+				}
+
 			}
 		}
 		public bool IsConnectedToInternet(string url)
