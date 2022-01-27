@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Net.NetworkInformation;
+using System.Reflection;
 namespace SimplePing
 {
 	/// <summary>
@@ -24,6 +25,7 @@ namespace SimplePing
 		public MainWindow()
 		{
 			InitializeComponent();
+			Version.Text = Assembly.GetEntryAssembly().GetName().Version.ToString();
 		}
 
 		private void Start_button_Click(object sender, RoutedEventArgs e)
