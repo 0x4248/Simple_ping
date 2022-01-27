@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("SimplePing")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Razer")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SimplePing")]
-[assembly: AssemblyCopyright("Copyright © Razer 2022")]
+[assembly: AssemblyCopyright("Copyright © awesomelewis2007 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
