@@ -34,7 +34,7 @@ namespace SimplePing
 				"www.microsoft.com"
 			};
 			bool isconnected = false;
-			long[] times = new long[] {0,0};
+			long[] times = new long[] {0,0,0,0};
 			
 			foreach (var current_domain in domains)
 			{
@@ -55,8 +55,28 @@ namespace SimplePing
 					
 				}
 			}
-			long avragetime = times[0] + times[1];
-			avragetime = avragetime / 2;
+			foreach (var current_domain in domains)
+			{
+				if (IsConnectedToInternet(current_domain))
+				{
+					isconnected = true;
+					if (current_domain == "www.google.com")
+					{
+						times[2] = pingtime(current_domain);
+					}
+					if (current_domain == "www.microsoft.com")
+					{
+						times[3] = pingtime(current_domain);
+					}
+				}
+				else
+				{
+
+				}
+			}
+			
+			long avragetime = times[0] + times[1] + times[2] + times[3];
+			avragetime = avragetime / 4;
 			if (!isconnected)
 			{
 				Status_text.Text = "Not connected to Internet!";
