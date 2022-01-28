@@ -39,16 +39,24 @@ namespace SimplePing
 				if(pingspeed > 50)
 				{
 					Fastorslow.Text = "Slow";
+					var bc = new BrushConverter();
+
+					Fastorslow.Foreground = (Brush)bc.ConvertFrom("#FFDA0000");
 				}
 				if(pingspeed < 50)
 				{
 					Fastorslow.Text = "OK";
+					var bc = new BrushConverter();
+
+					Fastorslow.Foreground = (Brush)bc.ConvertFrom("#FF000000");
 				}
 				if (pingspeed < 10)
 				{
 					Fastorslow.Text = "Fast";
-				}
+					var bc = new BrushConverter();
 
+					Fastorslow.Foreground = (Brush)bc.ConvertFrom("#FF46C700");
+				}
 			}
 		}
 		public bool IsConnectedToInternet(string url)
@@ -84,7 +92,6 @@ namespace SimplePing
 			}
 			return 0;
 		}
-
 
 		private void Input_domain_or_ip_GotFocus(object sender, RoutedEventArgs e)
 		{
