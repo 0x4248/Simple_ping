@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimplePing"
         mc:Ignorable="d"
-        Title="Custom ping" Height="112" Width="328" Icon="/cloud-sync.png">
+        Title="Custom ping" Height="112" Width="328" Icon="/cloud-sync.png" ResizeMode="CanMinimize">
     <Grid>
         <TextBox x:Name="Input_domain_or_ip" HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Text="Domain or IP address" VerticalAlignment="Top" Width="231" RenderTransformOrigin="0.5,0.5" GotFocus="Input_domain_or_ip_GotFocus">
             <TextBox.RenderTransform>
