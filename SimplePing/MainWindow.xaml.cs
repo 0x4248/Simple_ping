@@ -79,6 +79,27 @@ namespace SimplePing
 			
 			long avragetime = times[0] + times[1] + times[2] + times[3];
 			avragetime = avragetime / 4;
+			if (avragetime > 50)
+			{
+				Fastorslow.Text = "Slow";
+				var bc = new BrushConverter();
+
+				Fastorslow.Foreground = (Brush)bc.ConvertFrom("#FFDA0000");
+			}
+			if (avragetime < 50)
+			{
+				Fastorslow.Text = "OK";
+				var bc = new BrushConverter();
+
+				Fastorslow.Foreground = (Brush)bc.ConvertFrom("#FF000000");
+			}
+			if (avragetime < 10)
+			{
+				Fastorslow.Text = "Fast";
+				var bc = new BrushConverter();
+
+				Fastorslow.Foreground = (Brush)bc.ConvertFrom("#FF46C700");
+			}
 			if (!isconnected)
 			{
 				Status_text.Text = "Not connected to Internet!";
