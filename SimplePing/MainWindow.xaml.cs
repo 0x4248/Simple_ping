@@ -162,5 +162,13 @@ namespace SimplePing
 			Custom_ping customping = new Custom_ping();
 			customping.Show();
 		}
+
+		private void Network_info(object sender, RoutedEventArgs e)
+		{
+			Network_Info networkinfo = new Network_Info();
+			networkinfo.Show();
+		}
+
+
 	}
 }
