@@ -103,20 +103,14 @@ namespace SimplePing
 			if (!isconnected)
 			{
 				Status_text.Text = "Not connected to Internet!";
-				BitmapImage bitmap = new BitmapImage();
-				bitmap.BeginInit();
-				bitmap.UriSource = new Uri(Directory.GetCurrentDirectory() + "/wi-fi-disconnected.png");
-				bitmap.EndInit();
+				BitmapImage bitmap = new BitmapImage(new Uri("pack://application:,,,/wi-fi-disconnected.png"));
 				Status.Source = bitmap;
 				ping_time.Text = "N/A";
 				Start_button.Content = "Try again";
 			} else
 			{
 				Status_text.Text = "Connected to Internet!";
-				BitmapImage bitmap = new BitmapImage();
-				bitmap.BeginInit();
-				bitmap.UriSource = new Uri(Directory.GetCurrentDirectory() + "/wi-fi-connected.png");
-				bitmap.EndInit();
+				BitmapImage bitmap = new BitmapImage(new Uri("pack://application:,,,/wi-fi-connected.png"));
 				Status.Source = bitmap;
 				ping_time.Text = avragetime.ToString()+"MS";
 				Start_button.Content = "Refresh";

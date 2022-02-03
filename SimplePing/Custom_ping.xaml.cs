@@ -32,10 +32,7 @@ namespace SimplePing
 			{
 				ping_time_text.Text = "Cant Connect";
 				Fastorslow.Text = "";
-				BitmapImage bitmap = new BitmapImage();
-				bitmap.BeginInit();
-				bitmap.UriSource = new Uri(Directory.GetCurrentDirectory() + "/cloud-cross.png");
-				bitmap.EndInit();
+				BitmapImage bitmap = new BitmapImage(new Uri("pack://application:,,,/cloud-cross.png"));
 				Status.Source = bitmap;
 			}
 			if (IsConnectedToInternet(Input_domain_or_ip.Text))
@@ -50,9 +47,10 @@ namespace SimplePing
 					var bc = new BrushConverter();
 
 					Fastorslow.Foreground = (Brush)bc.ConvertFrom("#FFDA0000");
-					
-					bitmap.UriSource = new Uri(Directory.GetCurrentDirectory() + "/error-cloud.png");
-					
+
+					bitmap.UriSource = new Uri("pack://application:,,,/error-cloud.png");
+
+
 					Status.Source = bitmap;
 				}
 				if(pingspeed < 50)
@@ -61,7 +59,7 @@ namespace SimplePing
 					var bc = new BrushConverter();
 
 					Fastorslow.Foreground = (Brush)bc.ConvertFrom("#FF000000");
-					bitmap.UriSource = new Uri(Directory.GetCurrentDirectory() + "/cloud-tick.png");
+					bitmap.UriSource = new Uri("pack://application:,,,/cloud-tick.png");
 					Status.Source = bitmap;
 				}
 				if (pingspeed < 10)
@@ -70,7 +68,7 @@ namespace SimplePing
 					var bc = new BrushConverter();
 
 					Fastorslow.Foreground = (Brush)bc.ConvertFrom("#FF46C700");
-					bitmap.UriSource = new Uri(Directory.GetCurrentDirectory() + "/cloud-tick.png");
+					bitmap.UriSource = new Uri("pack://application:,,,/cloud-tick.png");
 					Status.Source = bitmap;
 				}
 				bitmap.EndInit();
