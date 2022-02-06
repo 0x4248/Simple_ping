@@ -52,6 +52,9 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cloud-sync.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -148,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="error-cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cloud-sync.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
