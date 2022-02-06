@@ -28,7 +28,9 @@ namespace SimplePing
 			// Get the IP
 			string myIP = Dns.GetHostByName(hostName).AddressList[0].ToString();
 			Local_IP_Text.Text =  myIP;
-			
+			string externalIpString = new WebClient().DownloadString("http://icanhazip.com").Replace("\\r\\n", "").Replace("\\n", "").Trim();
+			Public_IP_Text.Text = IPAddress.Parse(externalIpString).ToString();
+
 		}
 
 	}
