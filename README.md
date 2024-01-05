@@ -2,7 +2,7 @@
 Quickly check internet status and ping time
 
 ### Simple and easy to use
-Just click start to test it only takes a few miliseconds (depending on network speed)
+Just click start to test it only takes a few milliseconds (depending on network speed)
 
 ![Home](https://github.com/awesomelewis2007/Simple_ping/blob/main/doc/homepage.png)
 ![Home](https://github.com/awesomelewis2007/Simple_ping/blob/main/doc/internet.png)
