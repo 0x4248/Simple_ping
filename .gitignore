@@ -5,3 +5,5 @@ SimplePing.exe.config
 */bin
 */obj
 /.vs
+
+.DS_Store
